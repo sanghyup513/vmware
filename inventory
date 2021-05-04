@@ -1,9 +1,7 @@
 [nodes]
-10.50.1.260	 vm_ipaddr=10.50.1.260
-10.50.1.261	 vm_ipaddr=10.50.1.261
-10.50.1.262	 vm_ipaddr=10.50.1.262
+10.10.170.2      vm_ipaddr=10.10.170.21
 
 [nodes:vars]
 ansible_ssh_user=root
-ansible_ssh_pass=password
+ansible_ssh_pass=Amoreadmin1!
 ansible_ssh_common_args="-o GlobalKnownHostsFile=/dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
