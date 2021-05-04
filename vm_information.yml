@@ -6,7 +6,7 @@ vcenter_pass: "Amoreadmin1!"
 datacenter_name: "Datacenter"
 cluster_name: "10.10.170.2"
 datastore_name: "datastore1"
-vm_network: "10.10.170.X""
+vm_network: "10.10.170.X"
 
 ### variable 'virtual machine"
 vm_template: "redhat 7.9"
