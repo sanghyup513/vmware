@@ -1,0 +1,23 @@
+---
+- name: Disable 'SELinux'
+  selinux:
+    state: disabled
+
+- name : Disable 'firewalld'
+  systemd:
+    name: firewalld
+    state: stopped
+    enabled: no
+
+- name: install the recommand package
+  package:
+    name:
+      - wget
+      - bash-completion
+      - git
+    state: latest
+
+- name: Reboot System (wait for server active)
+  reboot:
+    reboot_timeout: 600
+    test_command: uptime

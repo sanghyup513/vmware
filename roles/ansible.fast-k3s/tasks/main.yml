@@ -1,0 +1,13 @@
+---
+- name: Deploy VM Template
+  include: deploy_vmware.yml
+  tags: [ vm ]
+
+- name: Preinstallation 'k3s'
+  include: config_vm.yml
+  tags: [ k3s ]
+
+- name: Installation 'k3s'
+  include: install_k3s.yml
+  tags: [ k3s ]
+

@@ -1,0 +1,4 @@
+---
+- name: Installation 'k3s'
+  shell: 
+    cmd: "curl -sfL https://get.k3s.io | sh -"

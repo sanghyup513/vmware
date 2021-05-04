@@ -1,0 +1,15 @@
+---
+### variable information 'vcenter'
+vcenter_server: "vc.changeme.com"
+vcenter_user: "Administrator@vsphere.local"
+vcenter_pass: "password"
+datacenter_name: "Datacenter"
+cluster_name: "Cluster"
+datastore_name: "Datastore-1"
+vm_network: "VM Network"
+
+### variable 'virtual machine"
+vm_template: "c7.7-template"
+vm_netmask: "255.255.255.0"
+vm_gateway: "192.168.0.1"
+vm_dns: "1.1.1.1"

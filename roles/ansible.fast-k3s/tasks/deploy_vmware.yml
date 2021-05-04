@@ -1,0 +1,32 @@
+---
+- name: Clone the template
+  vmware_guest:
+    hostname: "{{ vcenter_server }}"
+    username: "{{ vcenter_user }}"
+    password: "{{ vcenter_pass }}"
+    validate_certs: False
+    name: k3s-{{ vm_ipaddr | replace('.','-') }}
+    template: "{{ vm_template }}"
+    datacenter: "{{ datacenter_name }}"
+    folder: /{{ datacenter_name }}/vm
+    cluster: "{{ cluster_name }}"
+    datastore: "{{ datastore_name }}"
+    networks:
+    - name: "{{ vm_network }}"
+      ip: "{{ vm_ipaddr }}"
+      netmask: "{{ vm_netmask }}"
+      gateway: "{{ vm_gateway }}"
+      type: static
+      dns_servers: "{{ vm_dns }}"
+      start_connected: yes
+    customization:
+      hostname: k3s-{{ vm_ipaddr | replace('.','-') }}
+      dns_servers:
+        - "{{ vm_dns }}"
+    state: poweredon
+    wait_for_ip_address: yes
+  delegate_to: localhost
+
+- name: Wait for 'VM'
+  pause:
+    minutes: 2
