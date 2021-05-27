@@ -9,7 +9,7 @@ datastore_name: "datastore1"
 vm_network: "10.10.170.X"
 
 ### variable 'virtual machine"
-vm_template: "redhat 7.9"
+vm_template: "test"
 vm_netmask: "255.255.255.0"
 vm_gateway: "10.10.170.1"
 vm_dns: "168.126.63.1"
