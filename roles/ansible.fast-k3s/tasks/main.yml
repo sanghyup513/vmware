@@ -3,6 +3,6 @@
   include: deploy_vmware.yml
   tags: [ vm ]
 
-- name: Preinstallation 'k3s'
+- name: OS Configration
   include: config_vm.yml
-  tags: [ k3s ]
+  tags: [ OS ]
