@@ -26,3 +26,7 @@
     state: poweredon
     wait_for_ip_address: yes
   delegate_to: localhost
+    
+- name: Wait for 'VM'
+  pause:
+    minutes: 2
