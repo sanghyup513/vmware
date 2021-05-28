@@ -4,7 +4,7 @@ vcenter_server: "10.10.170.4"
 vcenter_user: "administrator@vsphere.local"
 vcenter_pass: "Amoreadmin1!"
 datacenter_name: "Datacenter"
-cluster_name: "10.10.170.2"
+cluster_name: "cluster"
 datastore_name: "datastore1"
 vm_network: "10.10.170.X"
 
